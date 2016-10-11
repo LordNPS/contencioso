@@ -1,0 +1,17 @@
+{
+  "name": "small-server",
+  "version": "0.0.2",
+  "description": "Agrega dados de voos e junta-os às fichas de clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodejs index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.6.3",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}
