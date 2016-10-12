@@ -6,7 +6,7 @@ var ficheiro = fs.readFileSync(filePath, 'utf-8');
 var linhas = ficheiro.toString().split("\n");
 //var connection = mongoose.createConnection('mongodb://localhost/contencioso')
 //autoIncrement.initialize(connection);
-mongoose.connect('mongodb://localhost/contencioso');
+mongoose.connect('mongodb://localhost:27018/contencioso');
 
 var caso = require('./models/caso.js');
 linhas = linhas.map((linha)=>{
@@ -23,9 +23,9 @@ linhas.forEach((linha,idx)=>{
     })
     finalObject.push(obj);
 })
-
+var newCaso;
 finalObject.forEach((item)=>{
-    var newCaso = new caso();
+    newCaso = new caso();
     for(field in item){
         newCaso[field]=item[field];
     }
