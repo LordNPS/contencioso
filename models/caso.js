@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var autoIncrement = require('mongoose-auto-increment');
 
-var conteciosoSchema = new mongoose.Schema({
+var contenciosoSchema = new mongoose.Schema({
     idContencioso: Number,
     idAireclaim: String,
     submitted: String,
@@ -14,6 +14,6 @@ var conteciosoSchema = new mongoose.Schema({
     comentarios: [String],
     info: mongoose.Schema.Types.Mixed
 });
-contenciosoSchema.plugin(autoIncrement.plugin, {model: 'caso', field='idContencioso'})
-module.exports = mongoose.model('caso',conteciosoSchema);
+//contenciosoSchema.plugin(autoIncrement.plugin, {model: 'caso', field:'idContencioso'})
+module.exports = mongoose.model('caso',contenciosoSchema);
 
